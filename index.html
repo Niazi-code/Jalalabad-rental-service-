@@ -1,0 +1,2856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jalal Abad Car Rental Service</title>
+
+<meta name="description" content="Jalal Abad Car Rental Service - Reliable cars for rent in Jalalabad, Nangarhar, Afghanistan.">
+
+<style>
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080a0d;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --gold: #f5b400;
+    --gold-light: #ffd65a;
+    --dark: #080a0d;
+    --dark2: #101419;
+    --card: #14191f;
+    --border: #2b323a;
+    --gray: #aeb5bd;
+    --white: #ffffff;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: rgba(5, 7, 9, 0.92);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.navbar {
+    max-width: 1250px;
+    height: 78px;
+    margin: auto;
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: .5px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ddd;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 120px 20px 70px;
+
+    background:
+        radial-gradient(circle at 50% 20%, #343a42 0%, #11151a 35%, #080a0d 75%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.8)
+        );
+
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.hero-badge {
+    display: inline-block;
+    border: 1px solid rgba(245,180,0,.5);
+    color: var(--gold);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    margin-bottom: 22px;
+    background: rgba(245,180,0,.05);
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 82px);
+    line-height: 1;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #c5cbd1;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 14px 24px;
+
+    border-radius: 9px;
+
+    font-weight: 800;
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: #000;
+}
+
+.btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 1px solid #555e67;
+    color: white;
+}
+
+.btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+section {
+    padding: 100px 20px;
+}
+
+.container {
+    width: min(1200px, 100%);
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading .small-title {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 13px;
+}
+
+.section-heading h2 span {
+    color: var(--gold);
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin: auto;
+    color: var(--gray);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    background: #0d1014;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    color: var(--gray);
+    margin-bottom: 17px;
+    line-height: 1.8;
+}
+
+.about-list {
+    margin-top: 25px;
+    display: grid;
+    gap: 12px;
+}
+
+.about-list div {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.check {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.about-card {
+    background: linear-gradient(145deg,#1a2026,#0e1115);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.about-card .big-icon {
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    color: var(--gray);
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.feature {
+    padding: 30px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: .3s;
+}
+
+.feature:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+}
+
+.feature-icon {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FLEET GALLERY
+========================================================= */
+
+.fleet {
+    background: #0d1014;
+}
+
+.car-gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(12, 1fr);
+
+    grid-auto-rows: 240px;
+
+    gap: 15px;
+}
+
+.car-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    background: #15191e;
+    cursor: pointer;
+}
+
+/* Different positions */
+
+.car-item:nth-child(1) {
+    grid-column: span 6;
+    grid-row: span 2;
+}
+
+.car-item:nth-child(2) {
+    grid-column: span 3;
+}
+
+.car-item:nth-child(3) {
+    grid-column: span 3;
+}
+
+.car-item:nth-child(4) {
+    grid-column: span 3;
+}
+
+.car-item:nth-child(5) {
+    grid-column: span 3;
+}
+
+.car-item:nth-child(6) {
+    grid-column: span 6;
+}
+
+.car-item:nth-child(7),
+.car-item:nth-child(8),
+.car-item:nth-child(9),
+.car-item:nth-child(10) {
+    grid-column: span 3;
+}
+
+.car-item:nth-child(11) {
+    grid-column: span 4;
+}
+
+.car-item:nth-child(12) {
+    grid-column: span 4;
+}
+
+.car-item:nth-child(13) {
+    grid-column: span 4;
+}
+
+.car-item:nth-child(14),
+.car-item:nth-child(15),
+.car-item:nth-child(16),
+.car-item:nth-child(17),
+.car-item:nth-child(18),
+.car-item:nth-child(19) {
+    grid-column: span 4;
+}
+
+.car-item:nth-child(20),
+.car-item:nth-child(21),
+.car-item:nth-child(22),
+.car-item:nth-child(23),
+.car-item:nth-child(24),
+.car-item:nth-child(25),
+.car-item:nth-child(26),
+.car-item:nth-child(27),
+.car-item:nth-child(28),
+.car-item:nth-child(29) {
+    grid-column: span 3;
+}
+
+.car-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s;
+}
+
+.car-item:hover img {
+    transform: scale(1.08);
+}
+
+.car-overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+
+    padding: 25px 18px 17px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.9)
+        );
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.car-number {
+    font-weight: bold;
+}
+
+.view-icon {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    background: rgba(245,180,0,.95);
+    color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.gallery-note {
+    text-align: center;
+    color: #888;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   VIDEO SECTION
+========================================================= */
+
+.videos {
+    background: #080a0d;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+}
+
+.video-card {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 18px;
+    background: #11151a;
+    border: 1px solid var(--border);
+}
+
+.video-card:nth-child(1) {
+    grid-column: span 7;
+}
+
+.video-card:nth-child(2) {
+    grid-column: span 5;
+}
+
+.video-card:nth-child(3) {
+    grid-column: span 5;
+}
+
+.video-card:nth-child(4) {
+    grid-column: span 7;
+}
+
+.video-card video {
+    width: 100%;
+    height: 360px;
+    display: block;
+    object-fit: cover;
+    background: #000;
+}
+
+.video-info {
+    padding: 18px 20px;
+}
+
+.video-info h3 {
+    margin-bottom: 5px;
+}
+
+.video-info p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services {
+    background: #0d1014;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.service {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 30px 22px;
+    text-align: center;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.service:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FUTURE
+========================================================= */
+
+.future-box {
+    max-width: 900px;
+    margin: auto;
+
+    padding: 55px 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #252b32,
+            #111419
+        );
+
+    border: 1px solid var(--border);
+}
+
+.future-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.future-box h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.future-box p {
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   BOOKING
+========================================================= */
+
+.booking {
+    background: #0d1014;
+}
+
+.booking-box {
+    width: min(720px,100%);
+    margin: auto;
+
+    padding: 35px;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 7px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 14px;
+
+    background: #0b0e11;
+    border: 1px solid #303740;
+
+    border-radius: 8px;
+
+    color: white;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: var(--gold);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.contact-card h3 {
+    margin-bottom: 18px;
+}
+
+.contact-link {
+    display: block;
+    color: var(--gold);
+    margin: 12px 0;
+    transition: .2s;
+}
+
+.contact-link:hover {
+    color: var(--gold-light);
+}
+
+.map-box {
+    height: 220px;
+
+    margin-top: 20px;
+
+    border-radius: 12px;
+
+    background:
+        radial-gradient(circle,#343a41,#14181d);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.map-box div {
+    padding: 20px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #050607;
+    border-top: 1px solid #20252b;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-logo span {
+    color: var(--gold);
+}
+
+footer p {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: #25D366;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    z-index: 999;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.5);
+
+    transition: .3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   IMAGE LIGHTBOX
+========================================================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,.94);
+
+    z-index: 20000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 92vw;
+    max-height: 88vh;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+}
+
+.close-lightbox {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+    color: #000;
+
+    border: none;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.lightbox-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: rgba(245,180,0,.9);
+    color: #000;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 24px;
+}
+
+.prev {
+    left: 25px;
+}
+
+.next {
+    right: 25px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px) {
+
+    .nav-links {
+        position: absolute;
+
+        top: 78px;
+        left: 0;
+
+        width: 100%;
+
+        background: #080a0d;
+
+        flex-direction: column;
+
+        padding: 25px;
+
+        display: none;
+
+        border-bottom: 1px solid #252a30;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .car-gallery {
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: 210px;
+    }
+
+    .car-item,
+    .car-item:nth-child(n) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .car-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .car-item:nth-child(6),
+    .car-item:nth-child(11),
+    .car-item:nth-child(16) {
+        grid-column: span 2;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-card,
+    .video-card:nth-child(n) {
+        grid-column: span 1;
+    }
+
+    .video-card video {
+        height: 300px;
+    }
+}
+
+
+@media(max-width:600px) {
+
+    section {
+        padding: 75px 15px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-box {
+        padding: 22px;
+    }
+
+    .car-gallery {
+        grid-auto-rows: 180px;
+        gap: 10px;
+    }
+
+    .video-card video {
+        height: 230px;
+    }
+
+    .lightbox {
+        padding: 15px;
+    }
+
+    .lightbox-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     NAVIGATION
+====================================================== -->
+
+<header>
+
+<nav class="navbar">
+
+<a href="#home" class="logo">
+JALAL ABAD <span>CAR RENTAL</span>
+</a>
+
+<button class="menu-btn" id="menuBtn">
+☰
+</button>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#fleet">Our Cars</a></li>
+<li><a href="#videos">Videos</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#future">Future</a></li>
+<li><a href="#booking">Booking</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+🚗 JALALABAD • NANGARHAR • AFGHANISTAN
+</div>
+
+<h1>
+Jalal Abad
+<span>Car Rental</span>
+Service
+</h1>
+
+<p>
+Your trusted local car rental service in Jalalabad.
+Choose from our vehicle collection for family trips,
+business travel, daily transportation, special occasions
+and other journeys.
+</p>
+
+<div class="hero-buttons">
+
+<a
+href="#fleet"
+class="btn btn-gold">
+🚘 Explore Our Cars
+</a>
+
+<a
+href="https://wa.me/qr/N3SJ5A72PI4CI1"
+target="_blank"
+class="btn btn-outline">
+💬 WhatsApp Us
+</a>
+
+<a
+href="tel:+93788488279"
+class="btn btn-outline">
+📞 Call Now
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     ABOUT
+====================================================== -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small-title">About Us</div>
+
+<h2>
+Your Journey,
+<span>Our Service</span>
+</h2>
+
+<p>
+Making car rental simple and convenient in Jalalabad.
+</p>
+
+</div>
+
+
+<div class="about-grid">
+
+<div class="about-text">
+
+<h3>Jalal Abad Car Rental Service</h3>
+
+<p>
+We provide car rental services for customers who need
+comfortable and convenient transportation in Jalalabad
+and surrounding areas.
+</p>
+
+<p>
+Whether you are traveling with family, going on a business
+trip, attending an event or simply need a vehicle for your
+daily transportation, you can contact us to discuss your
+rental requirements.
+</p>
+
+<div class="about-list">
+
+<div>
+<span class="check">✓</span>
+<span>Multiple vehicle options</span>
+</div>
+
+<div>
+<span class="check">✓</span>
+<span>Easy WhatsApp booking</span>
+</div>
+
+<div>
+<span class="check">✓</span>
+<span>Phone support</span>
+</div>
+
+<div>
+<span class="check">✓</span>
+<span>Jalalabad location</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="about-card">
+
+<div class="big-icon">
+🚘
+</div>
+
+<h3>
+Ready For Your Next Journey?
+</h3>
+
+<p>
+Browse our available vehicles and contact us
+to discuss your rental.
+</p>
+
+<br>
+
+<a
+href="#booking"
+class="btn btn-gold">
+Book A Car
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     FEATURES
+====================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small-title">
+Why Us
+</div>
+
+<h2>
+Simple.
+<span>Convenient.</span>
+Reliable.
+</h2>
+
+</div>
+
+
+<div class="features">
+
+<div class="feature">
+
+<div class="feature-icon">🚗</div>
+
+<h3>Vehicle Selection</h3>
+
+<p>
+Choose from our collection of vehicles
+for different travel requirements.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">📱</div>
+
+<h3>Easy Booking</h3>
+
+<p>
+Contact us directly through WhatsApp
+or phone to arrange your rental.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">📍</div>
+
+<h3>Jalalabad Service</h3>
+
+<p>
+Serving customers looking for
+car rental services in Jalalabad.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     29 CAR GALLERY
+====================================================== -->
+
+<section class="fleet" id="fleet">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small-title">
+Our Fleet
+</div>
+
+<h2>
+Explore Our
+<span>Cars</span>
+</h2>
+
+<p>
+Browse our vehicle collection. Tap any photo
+to view it in full screen.
+</p>
+
+</div>
+
+
+<div class="car-gallery">
+
+
+<!-- CAR 1 -->
+
+<div class="car-item"
+data-index="0">
+
+<img src="car1.jpg"
+alt="Rental Car 1"
+loading="lazy">
+
+<div class="car-overlay">
+
+<span class="car-number">
+Car 01
+</span>
+
+<span class="view-icon">
++
+</span>
+
+</div>
+
+</div>
+
+
+<!-- CAR 2 -->
+
+<div class="car-item"
+data-index="1">
+
+<img src="car2.jpg"
+alt="Rental Car 2"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 02</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 3 -->
+
+<div class="car-item"
+data-index="2">
+
+<img src="car3.jpg"
+alt="Rental Car 3"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 03</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 4 -->
+
+<div class="car-item"
+data-index="3">
+
+<img src="car4.jpg"
+alt="Rental Car 4"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 04</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 5 -->
+
+<div class="car-item"
+data-index="4">
+
+<img src="car5.jpg"
+alt="Rental Car 5"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 05</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 6 -->
+
+<div class="car-item"
+data-index="5">
+
+<img src="car6.jpg"
+alt="Rental Car 6"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 06</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 7 -->
+
+<div class="car-item"
+data-index="6">
+
+<img src="car7.jpg"
+alt="Rental Car 7"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 07</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 8 -->
+
+<div class="car-item"
+data-index="7">
+
+<img src="car8.jpg"
+alt="Rental Car 8"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 08</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 9 -->
+
+<div class="car-item"
+data-index="8">
+
+<img src="car9.jpg"
+alt="Rental Car 9"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 09</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 10 -->
+
+<div class="car-item"
+data-index="9">
+
+<img src="car10.jpg"
+alt="Rental Car 10"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 10</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 11 -->
+
+<div class="car-item"
+data-index="10">
+
+<img src="car11.jpg"
+alt="Rental Car 11"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 11</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 12 -->
+
+<div class="car-item"
+data-index="11">
+
+<img src="car12.jpg"
+alt="Rental Car 12"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 12</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 13 -->
+
+<div class="car-item"
+data-index="12">
+
+<img src="car13.jpg"
+alt="Rental Car 13"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 13</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 14 -->
+
+<div class="car-item"
+data-index="13">
+
+<img src="car14.jpg"
+alt="Rental Car 14"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 14</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 15 -->
+
+<div class="car-item"
+data-index="14">
+
+<img src="car15.jpg"
+alt="Rental Car 15"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 15</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 16 -->
+
+<div class="car-item"
+data-index="15">
+
+<img src="car16.jpg"
+alt="Rental Car 16"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 16</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 17 -->
+
+<div class="car-item"
+data-index="16">
+
+<img src="car17.jpg"
+alt="Rental Car 17"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 17</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 18 -->
+
+<div class="car-item"
+data-index="17">
+
+<img src="car18.jpg"
+alt="Rental Car 18"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 18</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 19 -->
+
+<div class="car-item"
+data-index="18">
+
+<img src="car19.jpg"
+alt="Rental Car 19"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 19</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 20 -->
+
+<div class="car-item"
+data-index="19">
+
+<img src="car20.jpg"
+alt="Rental Car 20"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 20</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 21 -->
+
+<div class="car-item"
+data-index="20">
+
+<img src="car21.jpg"
+alt="Rental Car 21"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 21</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 22 -->
+
+<div class="car-item"
+data-index="21">
+
+<img src="car22.jpg"
+alt="Rental Car 22"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 22</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 23 -->
+
+<div class="car-item"
+data-index="22">
+
+<img src="car23.jpg"
+alt="Rental Car 23"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 23</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 24 -->
+
+<div class="car-item"
+data-index="23">
+
+<img src="car24.jpg"
+alt="Rental Car 24"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 24</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 25 -->
+
+<div class="car-item"
+data-index="24">
+
+<img src="car25.jpg"
+alt="Rental Car 25"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 25</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 26 -->
+
+<div class="car-item"
+data-index="25">
+
+<img src="car26.jpg"
+alt="Rental Car 26"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 26</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 27 -->
+
+<div class="car-item"
+data-index="26">
+
+<img src="car27.jpg"
+alt="Rental Car 27"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 27</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 28 -->
+
+<div class="car-item"
+data-index="27">
+
+<img src="car28.jpg"
+alt="Rental Car 28"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 28</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+<!-- CAR 29 -->
+
+<div class="car-item"
+data-index="28">
+
+<img src="car29.jpg"
+alt="Rental Car 29"
+loading="lazy">
+
+<div class="car-overlay">
+<span class="car-number">Car 29</span>
+<span class="view-icon">+</span>
+</div>
+
+</div>
+
+
+</div>
+
+<p class="gallery-note">
+29 vehicles • Tap a vehicle photo to enlarge
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     VIDEOS
+====================================================== -->
+
+<section class="videos" id="videos">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small-title">
+Vehicle Videos
+</div>
+
+<h2>
+See Our Cars
+<span>In Action</span>
+</h2>
+
+<p>
+Watch our vehicle videos and get a better look
+before making your booking.
+</p>
+
+</div>
+
+
+<div class="video-grid">
+
+
+<div class="video-card">
+
+<video
+src="vid1.mp4"
+controls
+preload="metadata"
+playsinline>
+</video>
+
+<div class="video-info">
+
+<h3>Vehicle Showcase 01</h3>
+
+<p>
+Explore one of our available vehicles.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="video-card">
+
+<video
+src="vid2.mp4"
+controls
+preload="metadata"
+playsinline>
+</video>
+
+<div class="video-info">
+
+<h3>Vehicle Showcase 02</h3>
+
+<p>
+Take a closer look at our fleet.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="video-card">
+
+<video
+src="vid3.mp4"
+controls
+preload="metadata"
+playsinline>
+</video>
+
+<div class="video-info">
+
+<h3>Vehicle Showcase 03</h3>
+
+<p>
+See another vehicle from our collection.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="video-card">
+
+<video
+src="vid4.mp4"
+controls
+preload="metadata"
+playsinline>
+</video>
+
+<div class="video-info">
+
+<h3>Vehicle Showcase 04</h3>
+
+<p>
+Discover more vehicles available for rental.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     SERVICES
+====================================================== -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small-title">
+Our Services
+</div>
+
+<h2>
+Transportation
+<span>Made Simple</span>
+</h2>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service">
+
+<div class="service-icon">🚘</div>
+
+<h3>Daily Rental</h3>
+
+<p>
+Vehicles for your everyday
+transportation needs.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">✈️</div>
+
+<h3>Airport Trips</h3>
+
+<p>
+Transportation for airport
+journeys and travel plans.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">👨‍👩‍👧‍👦</div>
+
+<h3>Family Trips</h3>
+
+<p>
+Comfortable options for
+family travel and journeys.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">💼</div>
+
+<h3>Business Travel</h3>
+
+<p>
+Vehicle options for business
+and professional travel.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     FUTURE
+====================================================== -->
+
+<section id="future">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small-title">
+Our Future
+</div>
+
+<h2>
+Building A Better
+<span>Rental Experience</span>
+</h2>
+
+</div>
+
+
+<div class="future-box">
+
+<div class="future-icon">
+🚀
+</div>
+
+<h3>
+Growing With Our Customers
+</h3>
+
+<p>
+Our goal is to continue developing Jalal Abad Car Rental
+Service by expanding our vehicle collection and improving
+the way customers can discover and book vehicles.
+</p>
+
+<p>
+We plan to make the rental experience increasingly
+convenient through better online services, more vehicle
+options and easier communication.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     BOOKING
+====================================================== -->
+
+<section class="booking" id="booking">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small-title">
+Booking
+</div>
+
+<h2>
+Book Your
+<span>Car</span>
+</h2>
+
+<p>
+Send your rental request directly through WhatsApp.
+</p>
+
+</div>
+
+
+<div class="booking-box">
+
+<form id="bookingForm">
+
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label>
+Your Name
+</label>
+
+<input
+class="form-control"
+id="customerName"
+type="text"
+placeholder="Enter your name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Phone Number
+</label>
+
+<input
+class="form-control"
+id="customerPhone"
+type="tel"
+placeholder="Enter your phone number"
+required>
+
+</div>
+
+</div>
+
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label>
+Vehicle
+</label>
+
+<select
+class="form-control"
+id="vehicle"
+required>
+
+<option value="">
+Select vehicle
+</option>
+
+<option>Car 01</option>
+<option>Car 02</option>
+<option>Car 03</option>
+<option>Car 04</option>
+<option>Car 05</option>
+<option>Car 06</option>
+<option>Car 07</option>
+<option>Car 08</option>
+<option>Car 09</option>
+<option>Car 10</option>
+<option>Car 11</option>
+<option>Car 12</option>
+<option>Car 13</option>
+<option>Car 14</option>
+<option>Car 15</option>
+<option>Car 16</option>
+<option>Car 17</option>
+<option>Car 18</option>
+<option>Car 19</option>
+<option>Car 20</option>
+<option>Car 21</option>
+<option>Car 22</option>
+<option>Car 23</option>
+<option>Car 24</option>
+<option>Car 25</option>
+<option>Car 26</option>
+<option>Car 27</option>
+<option>Car 28</option>
+<option>Car 29</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Rental Date
+</label>
+
+<input
+class="form-control"
+id="rentalDate"
+type="date"
+required>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Number Of Days
+</label>
+
+<input
+class="form-control"
+id="days"
+type="number"
+min="1"
+placeholder="Example: 3"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Additional Message
+</label>
+
+<textarea
+class="form-control"
+id="customerMessage"
+rows="5"
+placeholder="Tell us anything else about your booking">
+</textarea>
+
+</div>
+
+
+<button
+class="btn btn-gold submit-btn"
+type="submit">
+
+💬 Send Booking Through WhatsApp
+
+</button>
+
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTACT
+====================================================== -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small-title">
+Contact
+</div>
+
+<h2>
+Get In
+<span>Touch</span>
+</h2>
+
+<p>
+Contact Jalal Abad Car Rental Service.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<h3>📞 Phone & WhatsApp</h3>
+
+
+<a
+class="contact-link"
+href="tel:+93788488279">
+
+📞 +93 788 488 279
+
+</a>
+
+
+<a
+class="contact-link"
+href="tel:+93748174141">
+
+📞 +93 748 174 141
+
+</a>
+
+
+<a
+class="contact-link"
+href="https://wa.me/qr/N3SJ5A72PI4CI1"
+target="_blank">
+
+💬 WhatsApp — +93 788 488 279
+
+</a>
+
+
+<a
+class="contact-link"
+href="https://wa.me/message/ST6CCUFE6GQAB1"
+target="_blank">
+
+💬 Booking WhatsApp — +93 748 174 141
+
+</a>
+
+
+<div style="margin-top:25px;display:flex;gap:10px;flex-wrap:wrap;">
+
+<a
+href="tel:+93788488279"
+class="btn btn-gold">
+
+Call 1
+
+</a>
+
+<a
+href="tel:+93748174141"
+class="btn btn-outline">
+
+Call 2
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>📍 Our Location</h3>
+
+<p style="color:#aaa;">
+Jalalabad, Nangarhar, Afghanistan
+</p>
+
+
+<div class="map-box">
+
+<div>
+
+<div style="font-size:45px;">
+📍
+</div>
+
+<p style="color:#bbb;margin-bottom:15px;">
+Find us on Google Maps
+</p>
+
+<a
+href="https://maps.app.goo.gl/6TzT3n6RsTSmSVPL7?g_st=iw"
+target="_blank"
+class="btn btn-gold">
+
+Open Google Maps
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+<div class="footer-logo">
+JALAL ABAD <span>CAR RENTAL SERVICE</span>
+</div>
+
+<p>
+Reliable transportation in Jalalabad, Nangarhar, Afghanistan.
+</p>
+
+<br>
+
+<p>
+© 2026 Jalal Abad Car Rental Service. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- ======================================================
+     FLOATING WHATSAPP
+====================================================== -->
+
+<a
+class="whatsapp-float"
+href="https://wa.me/message/ST6CCUFE6GQAB1"
+target="_blank"
+aria-label="WhatsApp Booking">
+
+💬
+
+</a>
+
+
+<!-- ======================================================
+     IMAGE LIGHTBOX
+====================================================== -->
+
+<div
+class="lightbox"
+id="lightbox">
+
+<button
+class="close-lightbox"
+id="closeLightbox">
+×
+</button>
+
+<button
+class="lightbox-arrow prev"
+id="prevImage">
+‹
+</button>
+
+<img
+id="lightboxImage"
+src=""
+alt="Car">
+
+<button
+class="lightbox-arrow next"
+id="nextImage">
+›
+</button>
+
+</div>
+
+
+<!-- ======================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const navLinks =
+document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function(){
+
+    navLinks.classList.toggle("active");
+
+});
+
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", function(){
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+
+/* =========================================================
+   CAR IMAGE LIGHTBOX
+========================================================= */
+
+const carImages = [];
+
+for(let i = 1; i <= 29; i++){
+
+    carImages.push("car" + i + ".jpg");
+
+}
+
+
+const carItems =
+document.querySelectorAll(".car-item");
+
+const lightbox =
+document.getElementById("lightbox");
+
+const lightboxImage =
+document.getElementById("lightboxImage");
+
+const closeLightbox =
+document.getElementById("closeLightbox");
+
+const prevImage =
+document.getElementById("prevImage");
+
+const nextImage =
+document.getElementById("nextImage");
+
+let currentImage = 0;
+
+
+function showImage(index){
+
+    currentImage = index;
+
+    lightboxImage.src =
+    carImages[currentImage];
+
+    lightbox.classList.add("active");
+
+}
+
+
+carItems.forEach(item => {
+
+    item.addEventListener("click", function(){
+
+        const index =
+        Number(this.dataset.index);
+
+        showImage(index);
+
+    });
+
+});
+
+
+function closeViewer(){
+
+    lightbox.classList.remove("active");
+
+}
+
+
+closeLightbox.addEventListener(
+"click",
+closeViewer
+);
+
+
+prevImage.addEventListener(
+"click",
+function(){
+
+    currentImage--;
+
+    if(currentImage < 0){
+
+        currentImage =
+        carImages.length - 1;
+
+    }
+
+    showImage(currentImage);
+
+});
+
+
+nextImage.addEventListener(
+"click",
+function(){
+
+    currentImage++;
+
+    if(currentImage >= carImages.length){
+
+        currentImage = 0;
+
+    }
+
+    showImage(currentImage);
+
+});
+
+
+/* Close when clicking outside image */
+
+lightbox.addEventListener(
+"click",
+function(e){
+
+    if(e.target === lightbox){
+
+        closeViewer();
+
+    }
+
+});
+
+
+/* Keyboard controls */
+
+document.addEventListener(
+"keydown",
+function(e){
+
+    if(!lightbox.classList.contains("active"))
+        return;
+
+    if(e.key === "Escape"){
+
+        closeViewer();
+
+    }
+
+    if(e.key === "ArrowLeft"){
+
+        prevImage.click();
+
+    }
+
+    if(e.key === "ArrowRight"){
+
+        nextImage.click();
+
+    }
+
+});
+
+
+/* =========================================================
+   BOOKING FORM
+========================================================= */
+
+const bookingForm =
+document.getElementById("bookingForm");
+
+
+bookingForm.addEventListener(
+"submit",
+function(e){
+
+    e.preventDefault();
+
+
+    const name =
+    document.getElementById("customerName").value;
+
+    const phone =
+    document.getElementById("customerPhone").value;
+
+    const vehicle =
+    document.getElementById("vehicle").value;
+
+    const date =
+    document.getElementById("rentalDate").value;
+
+    const days =
+    document.getElementById("days").value;
+
+    const message =
+    document.getElementById("customerMessage").value;
+
+
+    const text =
+`🚗 NEW CAR RENTAL BOOKING
+
+👤 Name: ${name}
+
+📞 Phone: ${phone}
+
+🚘 Vehicle: ${vehicle}
+
+📅 Rental Date: ${date}
+
+📆 Number of Days: ${days}
+
+📝 Additional Message:
+${message || "No additional message."}`;
+
+
+    /*
+       Booking WhatsApp number:
+       +93 748 174 141
+    */
+
+    const whatsappNumber =
+    "93748174141";
+
+
+    const whatsappURL =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(text);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+});
+
+
+/* =========================================================
+   PREVENT VIDEO DOWNLOAD BUTTON ON SOME BROWSERS
+========================================================= */
+
+document.querySelectorAll("video").forEach(video => {
+
+    video.setAttribute(
+        "controlsList",
+        "nodownload"
+    );
+
+});
+
+
+</script>
+
+</body>
+</html>
